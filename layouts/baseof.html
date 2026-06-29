@@ -5,15 +5,29 @@
     {{ partial "head.html" . }}
 </head>
 
-<body class="scroll-style">
-    {{ partial "header.html" . }}
+<body id="top">
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
-    {{ block "main" . }}{{ end }}
+    <div id="page" class="s-pagewrap {{ if .IsHome }} ss-home {{ end }}">
 
-    {{ partial "footer.html" . }}
-    {{ partial "js.html" . }}
+        {{ partial "header.html" . }}
 
-    {{ partial "bot.html" . }}
+        {{ block "main" . }}{{ end }}
+
+        {{ partial "footer.html" . }}
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>
