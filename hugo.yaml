@@ -1,0 +1,16 @@
+baseURL: "https://example.org/"
+languageCode: "en"
+title: "M Inam"
+
+enableRobotsTXT: true
+
+params:
+  email: info@zenitheclipse.com
+  tel: +971 42 500 715
+  fb: ""
+  instagram: ""
+  x: ""
+  images: [/favicon/web-app-manifest-512x512.png]
+  social:
+    facebook_admin:
+    twitter:
