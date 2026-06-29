@@ -1,0 +1,26 @@
+[
+  {
+    "name": "John Rockefeller",
+    "co": "Standard Oil Co.",
+    "text": "Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum. Laudantium quia consequatur molestias.",
+    "img": "/images/avatars/user-01.jpg"
+  },
+  {
+    "name": "Andrew Carnegie",
+    "co": "Carnegie Steel Co.",
+    "text": "Voluptas tempore rem. Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum. Laudantium quia consequatur molestias.",
+    "img": "/images/avatars/user-04.jpg"
+  },
+  {
+    "name": "Henry Ford",
+    "co": "Ford Motor Co.",
+    "text": "Nisi dolores quaerat fuga rem nihil nostrum. Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Laudantium quia consequatur molestias.",
+    "img": "/images/avatars/user-06.jpg"
+  },
+  {
+    "name": "John Morgan",
+    "co": "JP Morgan & Co.",
+    "text": "Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum. Laudantium quia consequatur molestias.",
+    "img": "/images/avatars/user-02.jpg"
+  }
+]
