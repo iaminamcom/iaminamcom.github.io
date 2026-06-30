@@ -6,7 +6,7 @@
             <div class="column xl-12">
                 <h1 class="page-title">
                     <span class="page-title__small-type text-pretitle">Contact</span>
-                    Get In Touch
+                    Build Secure Health Data Integrations
                 </h1>
             </div>
         </div>
@@ -16,29 +16,31 @@
 
         <div class="row pageintro">
             <div class="column xl-6 lg-12">
-                <h2 class="text-display-title">Let's take your business to the next level.</h2>
+                <h2 class="text-display-title">Let's connect your healthcare, lab, or life sciences data with
+                    confidence.</h2>
             </div>
             <div class="column xl-6 lg-12 u-flexitem-x-right">
                 <p class="lead">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias eos quas blanditiis, quos sint
-                    nostrum fugit aperiam
-                    inventore optio itaque molestias corporis, ipsa tenetur eligendi nihil iste porro, natus culpa
-                    consequuntur. Maxime,
-                    corporis tempore. Sed tenetur veritatis velit recusandae eum, molestiae voluptate ducimus laudantium
-                    esse illo.
+                    If you are building a healthtech platform, diagnostic workflow, lab data system, clinical dashboard,
+                    or life sciences application, I can help you design secure integration layers using FHIR APIs,
+                    cloud data pipelines, audit trails, access control, and GxP/CSA-ready engineering practices.
                 </p>
             </div>
         </div> <!-- pageintro -->
 
         <div class="row pagemedia">
-            <d class="column xl-12">
+            <div class="column xl-12">
+                {{ with .Resources.GetMatch "contact-2400.jpg" }}
+                {{ $webp := .Resize "1919x webp"}}
                 <figure class="page-media">
-                    <img src="/images/thumbs/contact/contact-1200.jpg" srcset="/images/thumbs/contact/contact-2400.jpg 2400w, 
-                                             /images/thumbs/contact/contact-1200.jpg 1200w, 
-                                             /images/thumbs/contact/contact-600.jpg 600w"
-                        sizes="(max-width: 2400px) 100vw, 2400px" alt="">
+                    <img src="{{$webp.RelPermalink}}" srcset="{{$webp.RelPermalink}} 1920w, 
+                                                                     {{(.Resize `1200x webp`).RelPermalink}} 1200w, 
+                                                                     {{(.Resize `600x webp`).RelPermalink}} 600w"
+                        sizes="(max-width: 1920px) 100vw, 1920px" alt="compliance word cards" loading="lazy"
+                        width="{{$webp.Width}}" height="{{$webp.Height}}">
                 </figure>
-            </d>
+                {{ end }}
+            </div>
         </div> <!-- pagemedia -->
 
         <div class="row width-narrower pagemain">
@@ -48,13 +50,11 @@
                 <div class="row">
                     <div class="column xl-6 md-12 contact-cta">
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt quisquam voluptatibus
-                            debitis aperiam ratione. Officia,
-                            suscipit iure, tenetur eum consequatur, consequuntur omnis accusamus odit quod pariatur
-                            excepturi architecto veniam. Soluta
-                            modi dignissimos libero blanditiis at saepe doloribus temporibus illo facilis dolorem,
-                            aliquam obcaecati accusamus nihil
-                            laboriosam, esse vel. Quod, vitae.
+                            Reach out if you need help with FHIR integration, lab data pipelines, healthcare API
+                            architecture, audit trail implementation, secure dashboards, or regulated software
+                            documentation. I work best with teams that need more than a generic web application:
+                            systems that handle sensitive health or life sciences data and must be structured,
+                            traceable, secure, and ready for real-world workflows.
                         </p>
 
                         <a href="mailto:{{site.Params.email}}" class="btn btn--primary u-fullwidth contact-btn">

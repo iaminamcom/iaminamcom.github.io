@@ -3232,12 +3232,9 @@ td:last-child {
 	padding: 0;
 	outline: 0;
 	border: none;
-}
-
-.s-header__logo img {
-	width: var(--logo-width);
-	margin: 0;
-	vertical-align: bottom;
+	font-family: var(--font-2);
+	font-size: var(--text-xxl);
+	color: var(--color-white);
 }
 
 /* --------------------------------------------------------------------

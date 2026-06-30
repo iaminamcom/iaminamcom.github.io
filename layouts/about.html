@@ -6,7 +6,7 @@
             <div class="column xl-12">
                 <h1 class="page-title">
                     <span class="page-title__small-type text-pretitle">About</span>
-                    Hi, I'm Monica
+                    Hi, I'm M. Inam
                 </h1>
 
             </div>
@@ -17,30 +17,33 @@
 
         <div class="row pageintro">
             <div class="column xl-6 lg-12">
-                <h2 class="text-display-title">Some inspiring words to describe yourself</h2>
+                <h2 class="text-display-title">I build secure, interoperable, audit-ready systems for healthcare and
+                    life sciences data.</h2>
             </div>
             <div class="column xl-6 lg-12 u-flexitem-x-right">
                 <p class="lead">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias eos quas blanditiis, quos
-                    sint nostrum fugit aperiam
-                    inventore optio itaque molestias corporis, ipsa tenetur eligendi nihil iste porro, natus
-                    culpa consequuntur? Maxime,
-                    corporis tempore. Sed tenetur veritatis velit recusandae eum, molestiae voluptate ducimus
-                    laudantium esse illo
-                    doloribus atque eligendi deleniti iusto.
+                    I am a full-stack software engineer with a biotechnology background, focused on healthcare
+                    and life sciences integration. My moat is the intersection of biotechnology context,
+                    software engineering, FHIR APIs, cloud data pipelines, security, and GxP/CSA-ready thinking.
+                    I help teams turn messy clinical, lab, and life sciences data into systems that are structured,
+                    traceable, secure, and easier to validate.
                 </p>
             </div>
         </div> <!-- end pageintro -->
 
         <div class="row pagemedia">
-            <d class="column xl-12">
+            <div class="column xl-12">
+                {{ with .Resources.GetMatch "pexels-markus-winkler-1430818-19825346.jpg" }}
+                {{ $webp := .Resize "1919x webp"}}
                 <figure class="page-media">
-                    <img src="images/thumbs/about/about-1200.jpg" srcset="images/thumbs/about/about-2400.jpg 2400w, 
-                                                     images/thumbs/about/about-1200.jpg 1200w, 
-                                                     images/thumbs/about/about-600.jpg 600w"
-                        sizes="(max-width: 2400px) 100vw, 2400px" alt="">
+                    <img src="{{$webp.RelPermalink}}" srcset="{{$webp.RelPermalink}} 1920w, 
+                                                     {{(.Resize `1200x webp`).RelPermalink}} 1200w, 
+                                                     {{(.Resize `600x webp`).RelPermalink}} 600w"
+                        sizes="(max-width: 1920px) 100vw, 1920px" alt="compliance word cards" loading="lazy"
+                        width="{{$webp.Width}}" height="{{$webp.Height}}">
                 </figure>
-            </d>
+                {{ end }}
+            </div>
         </div> <!-- end pagemedia -->
 
         <div class="row width-narrower pagemain">
@@ -48,15 +51,27 @@
 
                 <h2>How I Got Here</h2>
                 <p>
-                    Eaque temporibus culpa perferendis expedita assumenda mollitia magnam. Lorem ipsum dolor sit
-                    amet consectetur adipisicing elit
-                    facilis voluptates voluptatum animi numquam quas ea praesentium quaerat maxime sunt odit
-                    inventore itaque est et autem sequi nulla.
-                    Distinctio obcaecati nesciunt asperiores dolorum tenetur voluptates, nemo alias doloremque.
-                    Quos cumque ipsum laudantium odio vero
-                    aut odit nostrum aliquam? Nostrum in facilis, minus fuga quasi voluptas explicabo possimus
-                    incidunt, expedita tempora eius rem nobis sequi.
-                    Doloribus esse sint suscipit quam nisi blanditiis voluptate explicabo.
+                    My path combines two disciplines that rarely meet in one profile: biotechnology and software
+                    engineering. I started with a biotechnology foundation, then built practical experience in
+                    modern web applications, dashboards, APIs, databases, Docker-based workflows, and cloud-ready
+                    systems. That combination now shapes my focus on healthcare and life sciences integration,
+                    where domain understanding and technical execution both matter.
+                </p>
+
+                <p>
+                    I am not positioning myself as a generic web developer. My focus is on systems that handle
+                    sensitive, complex, and regulated data: patient records, lab results, diagnostic workflows,
+                    clinical dashboards, sample data, audit logs, and integration layers between disconnected
+                    platforms. These systems need more than ordinary application development. They need secure
+                    access, reliable data models, validation rules, traceability, auditability, and documentation
+                    that supports long-term trust.
+                </p>
+
+                <p>
+                    Today, I am building toward a specialist profile in healthcare and life sciences integration:
+                    FHIR APIs, cloud data pipelines, secure health data platforms, audit trails, GxP/CSA-ready
+                    documentation, LIMS-style workflows, and regulated software foundations. My goal is to help
+                    teams build systems that are easier to integrate, secure, maintain, review, and validate.
                 </p>
 
                 <h2 class="u-add-bottom">My Values & Beliefs</h2>
@@ -64,86 +79,85 @@
                 <div class="grid-list-items list-items">
                     <div class="grid-list-items__item list-items__item u-remove-bottom">
                         <div class="list-items__item-header">
-                            <h6 class="list-items__item-small-title">Consectetur</h6>
+                            <h6 class="list-items__item-small-title">Data Integrity First</h6>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusamus
-                            consectetur adipisicing elit excepturi corrupti
-                            nam quae exercitationem cupiditate, provident ipsa delectus vero possimus
-                            reprehenderit quas ut officiis tempora voluptatum
-                            quibusdam consectetur commodi.
+                            Healthcare and life sciences systems are only as trustworthy as the data behind them.
+                            I value clean data models, validation rules, raw and processed data separation,
+                            error visibility, and traceable flows that help teams understand where data came from,
+                            how it changed, and how it is used.
                         </p>
                     </div>
                     <div class="grid-list-items__item list-items__item u-remove-bottom">
                         <div class="list-items__item-header">
-                            <h6 class="list-items__item-small-title">Adipisicing</h6>
+                            <h6 class="list-items__item-small-title">Security By Design</h6>
                         </div>
                         <p>
-                            Molestias, autem impedit culpa dolores excepturi, quidem unde ducimus, rerum commodi
-                            deserunt earum, minus voluptatum.
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe doloremque provident
-                            quas quae exercitationem laboriosam.
+                            Sensitive health and lab data should never be treated like ordinary app data. Access
+                            control, audit trails, encryption, safe error handling, secrets management, and
+                            least-privilege architecture must be considered early, not added at the end when risk
+                            is already built into the system.
                         </p>
                     </div>
                     <div class="grid-list-items__item list-items__item u-remove-bottom">
                         <div class="list-items__item-header">
-                            <h6 class="list-items__item-small-title">Doloremque</h6>
+                            <h6 class="list-items__item-small-title">Domain-Aware Engineering</h6>
                         </div>
                         <p>
-                            Mollitia accusamus consectetur. Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Adipisicing elit excepturi corrupti
-                            nam quae exercitationem cupiditate, provident ipsa delectus vero possimus
-                            reprehenderit quas ut officiis tempora voluptatum
-                            quibusdam consectetur commodi!
+                            Good healthcare software is not only about code. It requires understanding the workflow,
+                            the data, the users, and the consequences of mistakes. My biotechnology background helps
+                            me think beyond screens and endpoints, especially when working with lab, diagnostic,
+                            clinical, and life sciences data.
                         </p>
                     </div>
                     <div class="grid-list-items__item list-items__item u-remove-bottom">
                         <div class="list-items__item-header">
-                            <h6 class="list-items__item-small-title">Assumenda</h6>
+                            <h6 class="list-items__item-small-title">Traceability & Validation Readiness</h6>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe doloremque provident
-                            quas quae exercitationem laboriosam.
-                            Molestias, autem? Impedit culpa dolores excepturi, quidem unde ducimus, rerum
-                            commodi deserunt earum, minus voluptatum?
+                            Regulated systems should be explainable. Teams should know who changed what, when it
+                            happened, why it matters, and how a requirement connects to a test. I value software
+                            that is reviewable, audit-ready, and easier to support with GxP/CSA-style evidence.
                         </p>
                     </div>
                 </div> <!--grid-list-items -->
 
                 <h2>Why Work With Me</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque temporibus culpa perferendis
-                    expedita assumenda mollitia magnam,
-                    facilis voluptates voluptatum animi numquam quas ea praesentium quaerat maxime sunt odit
-                    inventore itaque est et autem sequi nulla.
-                    Distinctio obcaecati nesciunt asperiores dolorum tenetur voluptates, nemo alias doloremque.
-                    Quos cumque ipsum laudantium odio vero aut
-                    odit nostrum aliquam? Nostrum in facilis, minus fuga quasi voluptas explicabo possimus
-                    incidunt, expedita tempora eius rem nobis sequi.
-                    Doloribus esse sint suscipit quam nisi blanditiis voluptate explicabo.
+                    I bring a rare combination of practical software engineering and life sciences context. Many
+                    developers can build dashboards and APIs, but healthcare and regulated systems need more than
+                    speed. They need careful architecture, secure data handling, interoperability, traceability,
+                    disciplined documentation, and an understanding of why data quality matters.
                 </p>
 
                 <p>
-                    Quibusdam quis autem voluptatibus earum vel ex error ea magni. Rerum quam quos. Aut
-                    asperiores sit mollitia. Rem neque et voluptatem
-                    eos quia sed eligendi et. Eaque velit eligendi ut magnam. Cumque ducimus laborum doloribus
-                    facere maxime vel earum quidem enim suscipit.
-                    Numquam, corporis accusamus commodi saepe nostrum nesciunt nisi rem necessitatibus unde
-                    laboriosam molestias, quam ipsa voluptatum sed
-                    ex cumque facilis assumenda maiores tempore reiciendis enim accusantium?
+                    I can help teams design and build FHIR APIs, lab data pipelines, patient or diagnostic
+                    dashboards, audit trail systems, role-based access layers, cloud-ready backends, and
+                    validation-friendly documentation. The aim is not just to ship features. The aim is to build
+                    systems that are dependable, explainable, and ready for real operational workflows.
+                </p>
+
+                <p>
+                    My approach is especially useful for healthtech startups, diagnostic labs, clinical software
+                    teams, life sciences platforms, and regulated product teams that need a technical partner who
+                    understands both modern software delivery and the seriousness of health-related data.
                 </p>
 
                 <h2>A Few More Words About Myself</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et assumenda debitis aut quidem ad
-                    voluptates quibusdam soluta temporibus,
-                    eveniet nobis tempore sunt, provident sapiente accusamus dignissimos voluptatum fugiat nulla
-                    dicta nihil molestiae aspernatur error in.
-                    Ut quo porro voluptatum delectus asperiores culpa non cum facere minima nesciunt assumenda,
-                    praesentium reprehenderit accusamus, quam
-                    repellat nobis nemo? Ut magnam unde culpa pariatur possimus sunt fugiat ea maxime
-                    praesentium eaque quo odio sed eligendi harum dolor,
-                    repellendus reprehenderit facere nihil quam. Saepe, magni.
+                    I care about depth, clarity, and long-term maintainability. I prefer building fewer things well
+                    over producing fragile systems that become difficult to secure, extend, or validate. For me,
+                    quality-critical engineering means clean architecture, clear communication, reliable
+                    implementation, thoughtful edge-case handling, and documentation that helps future teams
+                    understand the system.
+                </p>
+
+                <p>
+                    My current focus is becoming a specialist in healthcare and life sciences integration:
+                    FHIR, cloud data, security, audit trails, GxP/CSA, and LIMS-style workflows. This is the
+                    direction where my software background and biotechnology education come together most strongly.
+                    I want to work on systems where data integrity matters, trust matters, and technical decisions
+                    have real-world impact.
                 </p>
 
             </div> <!-- end grid-block-->
