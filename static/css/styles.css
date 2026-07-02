@@ -104,18 +104,18 @@
    * color-2(#343D35)
    * color-3(#FEF5E4)
    */
-	--color-1: hsla(35, 87%, 49%, 1);
+	--color-1: hsla(191, 87%, 49%, 1);
 	--color-2: hsla(127, 8%, 22%, 1);
-	--color-3: hsla(39, 93%, 95%, 1);
+	--color-3: hsla(199, 93%, 95%, 1);
 
 	/* theme color variations
    */
-	--color-1-lightest: hsla(35, 87%, 96%, 1);
-	--color-1-lighter: hsla(35, 87%, 69%, 1);
-	--color-1-light: hsla(35, 87%, 59%, 1);
-	--color-1-dark: hsla(35, 87%, 39%, 1);
-	--color-1-darker: hsla(35, 87%, 29%, 1);
-	--color-1-darkest: hsla(35, 87%, 10%, 1);
+	--color-1-lightest: hsla(191, 87%, 96%, 1);
+	--color-1-lighter: hsla(191, 87%, 69%, 1);
+	--color-1-light: hsla(191, 87%, 59%, 1);
+	--color-1-dark: hsla(191, 87%, 39%, 1);
+	--color-1-darker: hsla(191, 87%, 29%, 1);
+	--color-1-darkest: hsla(191, 87%, 10%, 1);
 
 	--color-2-lightest: hsla(127, 8%, 55%, 1);
 	--color-2-lighter: hsla(127, 8%, 42%, 1);
@@ -123,9 +123,9 @@
 	--color-2-dark: hsla(127, 8%, 14%, 1);
 	--color-2-darker: hsla(127, 8%, 2%, 1);
 
-	--color-3-light: hsla(39, 93%, 100%, 1);
-	--color-3-dark: hsla(39, 93%, 85%, 1);
-	--color-3-darker: hsla(39, 93%, 75%, 1);
+	--color-3-light: hsla(199, 93%, 100%, 1);
+	--color-3-dark: hsla(199, 93%, 85%, 1);
+	--color-3-darker: hsla(199, 93%, 75%, 1);
 
 	/* feedback colors
    * color-error(#ffd1d2), color-success(#c8e675), 
@@ -1518,6 +1518,7 @@ hr.fancy::before {
  * ## additional typography & helper classes
  * -------------------------------------------------------------------- */
 .lead,
+.entry__primary p:first-of-type,
 .attention-getter {
 	font-family: var(--font-1);
 	font-size: var(--text-md);
@@ -1527,6 +1528,7 @@ hr.fancy::before {
 @media screen and (max-width: 800px) {
 
 	.lead,
+	.entry__primary p:first-of-type,
 	.attention-getter {
 		font-size: calc(var(--text-size) * 1.1);
 		line-height: calc(1.125 * var(--space));
@@ -2904,6 +2906,10 @@ td:last-child {
 
 .blog-card__title a {
 	color: var(--color-text-dark);
+}
+
+.blog-card__title a:hover {
+	color: var(--color-1);
 }
 
 /* --------------------------------------------------------------------
@@ -4506,7 +4512,7 @@ td:last-child {
 	color: var(--color-text);
 }
 
-.post-nav span {
+.post-nav span:not(.no__post) {
 	display: block;
 	font-family: var(--font-1);
 	font-weight: 400;
@@ -4515,6 +4521,11 @@ td:last-child {
 	color: var(--color-1);
 	margin-left: 0.2rem;
 	margin-bottom: var(--vspace-0_25);
+}
+
+.post-nav .no__post {
+	color: var(--color-2-lightest);
+	font-size: var(--text-sm);
 }
 
 /* related post

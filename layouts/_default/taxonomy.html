@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{ $isTerm := .Data.Term }}
+<section id="content" class="s-content">
+
+  <section class="s-pageheader pageheader">
+    <div class="row">
+      <div class="column xl-12">
+        <h1 class="page-title">
+          {{ if $isTerm }}
+          <span class="page-title__small-type text-pretitle">Posts with</span>
+          {{ .LinkTitle }}
+          {{ else }}
+          All {{ .LinkTitle }}
+          {{ end }}
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-pagecontent pagecontent">
+
+    <div class="row">
+      <div class="column xl-12 grid-block">
+
+        <!-- <div class="grid-full">         -->
+        <div class="grid-full grid-list-items">
+          {{ range .Pages }}
+          <div class="grid-list-items__item blog-card">
+            <div class="blog-card__header">
+              <h3 class="blog-card__title"><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></h3>
+            </div>
+            <div class="blog-card__text">
+              <p>{{ .Summary }}</p>
+            </div>
+            <a href="{{.RelPermalink}}" title="Read post: {{.LinkTitle}}" class="btn btn--primary btn--small">Read
+              more</a>
+          </div>
+          {{ end }}
+        </div>
+        <!-- </div>     -->
+
+      </div>
+    </div>
+  </section>
+
+</section>
+{{ end }}

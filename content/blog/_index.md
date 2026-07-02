@@ -2,7 +2,7 @@
 date: "2026-06-29T20:50:33+05:00"
 images: ["cover.png"]
 description: "Articles and practical notes on FHIR, healthcare interoperability, cloud health data pipelines, audit trails, GxP/CSA-ready software, security, and life sciences integration."
-title: "Blog | FHIR, Health Data & Life Sciences Integration Notes"
+title: "Blog - FHIR, Health Data & Life Sciences Integration Notes"
 tags:
   [
     "Blog",
